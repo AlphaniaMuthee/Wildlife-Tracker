@@ -4,7 +4,7 @@ public class Animal {
 
     public Animal(String name, int id) {
         this.name = name;
-        id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -14,4 +14,15 @@ public class Animal {
     public int getId() {
         return id;
     }
+
+    @Override
+    public boolean equals(Object otherAnimal) {
+        if (!(otherAnimal instanceof Animal)) {
+            return false;
+        } else {
+            Animal newAnimal= (Animal) otherAnimal;
+            return this.getName().equals(newAnimal.getName());
+        }
+    }
+
 }
