@@ -1,3 +1,5 @@
+import org.sql2o.Connection;
+
 public class Animal {
     private String name;
     private int id;
