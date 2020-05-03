@@ -63,6 +63,16 @@ public class SightingsTest {
     }
 
     @Test
+    public void save_savesEndangeredAnimalIdIntoDB_true(){
+        Endangered testEndangered = new Endangered("White Rhino", "Healthy", "Adult");
+        testEndangered.save();
+        Sightings testSightings = new Sightings("NE Quadrant", "Oscar",testEndangered.getId());
+        testSightings.save();
+        Sightings savedSightings = Sightings.find(testSightings.getId());
+        assertEquals(savedSightings.getEndangeredId(), testEndangered.getId());
+    }
+
+    @Test
     public void save_recordsTimeOfSightingInDatabase() {
         Sightings testSightings = new Sightings("NE Quadrant", "Oscar", 1);
         testSightings.save();
