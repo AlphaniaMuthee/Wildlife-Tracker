@@ -14,8 +14,8 @@ Launch psql and run the following commands to generate the database for the app.
 * CREATE DATABASE wildlife_tracker;
 * \c wildlife_tracker;
 * CREATE TABLE animals (id serial PRIMARY KEY, name varchar);
-* CREATE TABLE endangered (id serial PRIMARY KEY ,name varchar,age varchar,health varchar);
-* CREATE  TABLE  sightings (id serial PRIMARY KEY ,ranger varchar,date timestamp);
+* CREATE TABLE endangered_animal (id serial PRIMARY KEY ,location, animalid int , rangername varchar, sighting timestamp, endangeredid int);
+* CREATE  TABLE  sightings (id serial PRIMARY KEY ,rangername varchar,sighting timestamp);
 * CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
 
 ## Setup Requirements 
