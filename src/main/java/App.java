@@ -11,42 +11,10 @@ public class App {
                     return new ModelAndView(new HashMap(), "index.hbs");
                 }, new HandlebarsTemplateEngine());
 
-        get("/animal/", (request, response) ->
-                "<!DOCTYPE html>" +
-                        "<html>" +
-                        "<head>" +
-                        "<title>Animals entry</title>" +
-                        "<link rel='stylesheet' + href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>" +
-                        "</head>" +
-                        "<body>" +
-                        "<h1>ANIMALS ENTRY FORM</h1>" +
-                        "<form action=\"/animal/list/\" method=\"post\">"+
+        get("/animal/", (request, response) -> {
+                    return new ModelAndView(new HashMap(), "animals.hbs");
+                }, new HandlebarsTemplateEngine());
 
-                        "<div class=\"form-group\">" +
-                        "<input type=\"text\" id=\"name\" placeholder=\"Name of Animal spotted\" >" +
-                        "</div>" +
-                        "<div class=\"form-group\">" +
-                        "<label for=location>Location where animal was spotted</label>" +
-                        "<select name=location>"+
-                        "<option>Make a selection</option>"+
-                        "<option>NE Quadrant</option>"+
-                        "<option>SE Quadrant</option>"+
-                        "<option>SW Quadrant</option>" +
-                        "<option>NW Quadrant</option>" +
-                        "</select>" +
-                        "</div>" +
-
-                        "<div class=\"form-group\">" +
-                        "<input type=\"text\" id=\"rangername\" placeholder=\"Name of the ranger in charge of the sighting\" >" +
-                        "</div>" +
-
-                        "<button type=\"submit\" class=\"btn btn-success\">Add Animal</button>" +
-
-                        "</form>" +
-                        "</body>" +
-                        "</html>"
-
-        );
         get("/animal/list/", (request, response) ->
                 "<!DOCTYPE html>" +
                         "<html>" +
