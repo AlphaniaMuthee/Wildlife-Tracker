@@ -1,5 +1,6 @@
 import org.sql2o.*;
 import java.util.List;
+import java.util.Objects;
 
 public class Animal {
     private String name;
@@ -18,13 +19,16 @@ public class Animal {
     }
 
     @Override
-    public boolean equals(Object otherAnimal) {
-        if (!(otherAnimal instanceof Animal)) {
-            return false;
-        } else {
-            Animal newAnimal= (Animal) otherAnimal;
-            return this.getName().equals(newAnimal.getName());
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Objects.equals(name, animal.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 
     public void save() {

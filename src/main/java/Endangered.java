@@ -39,6 +39,16 @@ public class Endangered {
         }
     }
 
+//    @Override
+//    public void delete() {
+//        String sql = "DELETE FROM endangered_animals";
+//        try(Connection con = DB.sql2o.open()){
+//            con.createQuery(sql)
+//                    .executeUpdate();
+//        }
+//
+//    }
+
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO endangered_animals (name, health, age ) VALUES (:name :health :age)";
@@ -50,14 +60,14 @@ public class Endangered {
                     .getKey();
         }
     }
-    public List<Sightings> getSightings() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM sightings where endangeredId=:id";
-            return con.createQuery(sql)
-                    .addParameter("id", this.id)
-                    .executeAndFetch(Sightings.class);
-        }
-    }
+//    public List<Sightings> getSightings() {
+//        try(Connection con = DB.sql2o.open()) {
+//            String sql = "SELECT * FROM sightings where endangeredId=:id";
+//            return con.createQuery(sql)
+//                    .addParameter("id", this.id)
+//                    .executeAndFetch(Sightings.class);
+//        }
+//    }
 
     public static List<Endangered> all() {
         String sql = "SELECT * FROM endangered_animals";

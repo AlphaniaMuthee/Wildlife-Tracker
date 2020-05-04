@@ -13,24 +13,40 @@ public class App {
 
         // homepage creation
         get("/", (request, response) -> {
-                    return new ModelAndView(new HashMap(), "index.hbs");
+                    Map<String,Object> model = new HashMap<>();
+                    return new ModelAndView(model, "index.hbs");
                 }, new HandlebarsTemplateEngine());
         // getting new animals
         get("/animal/", (request, response) -> {
-                    return new ModelAndView(new HashMap(), "animals.hbs");
+                    Map<String,Object> model = new HashMap<>();
+                    return new ModelAndView(model, "animals.hbs");
                 }, new HandlebarsTemplateEngine());
         //posting new animals
         post("/animal/list/", (request, response) -> {
-            return new ModelAndView(new HashMap(), "animal-list.hbs");
+            Map<String,Object>model = new HashMap<>();
+            String Name = request.queryParams("name");
+            Animal animal = new Animal(Name);
+            request.session().attribute("Animal", animal.getName());
+            return new ModelAndView(model, "animal-list.hbs");
         }, new HandlebarsTemplateEngine());
 
         // getting new endangered animals
         get("/endangered/", (request, response) -> {
-            return new ModelAndView(new HashMap(), "endangered.hbs");
+            Map<String,Object> model = new HashMap<>();
+            return new ModelAndView(model, "endangered.hbs");
         }, new HandlebarsTemplateEngine());
         //posting new endangered animals
         post("/endangered/list/", (request, response) -> {
-            return new ModelAndView(new HashMap(), "endangered.hbs");
+            Map<String,Object>model = new HashMap<>();
+            String name = request.queryParams("name");
+            String health = request.queryParams("health");
+            String age = request.queryParams("age");
+
+            Endangered endangered = new Endangered(name, health, age);
+            request.session().attribute("Endangered", endangered.getName());
+            request.session().attribute("Endangered", endangered.getHealth());
+            request.session().attribute("Endangered", endangered.getAge());
+            return new ModelAndView(model, "endangered-list.hbs");
         }, new HandlebarsTemplateEngine());
 
 
