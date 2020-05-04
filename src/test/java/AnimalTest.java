@@ -50,16 +50,16 @@ public class AnimalTest {
         assertEquals(Animal.find(secondAnimal.getId()), secondAnimal);
     }
 
-    @Test
-    public void getSightings_retrievesAllSightingsFromDatabase_sightingsList() {
-        Animal testAnimal = new Animal("Monkey");
-        testAnimal.save();
-        Sightings firstSightings = new Sightings("NE Quadrant", "Oscar", testAnimal.getId());
-        firstSightings.save();
-        Sightings secondSightings = new Sightings("SW Quadrant", "Sarah", testAnimal.getId());
-        secondSightings.save();
-        Sightings[] sightings = new Sightings[] { firstSightings, secondSightings };
-        assertTrue(testAnimal.getSightings().containsAll(Arrays.asList(sightings)));
-    }
+//    @Test
+//    public void getSightings_retrievesAllSightingsFromDatabase_sightingsList() {
+//        Animal testAnimal = new Animal("Monkey");
+//        testAnimal.save();
+//        Sightings firstSightings = new Sightings("NE Quadrant", "Oscar", testAnimal.getId());
+//        firstSightings.save();
+//        Sightings secondSightings = new Sightings("SW Quadrant", "Sarah", testAnimal.getId());
+//        secondSightings.save();
+//        Sightings[] sightings = new Sightings[] { firstSightings, secondSightings };
+//        assertTrue(testAnimal.getSightings().containsAll(Arrays.asList(sightings)));
+//    }
 
 }

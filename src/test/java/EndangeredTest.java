@@ -22,6 +22,7 @@ public class EndangeredTest {
         assertTrue(firstEndangered.equals(anotherEndangered));
     }
 
+
     @Test
     public void all_returnsAllInstancesOfEndangered_false() {
         Endangered firstEndangered = new Endangered("White Rhino", "Healthy", "Adult");
@@ -32,26 +33,26 @@ public class EndangeredTest {
         assertEquals(false, Endangered.all().get(1).equals(secondEndangered));
     }
 
-//    @Test
-//    public void save_assignsIdToObject() {
-//        Endangered testEndangered = new Endangered("White Rhino", "Healthy", "Adult");
-//        testEndangered.save();
-//        Endangered savedEndangered = Endangered.all().get(0);
-//        assertEquals(testEndangered.getId(), savedEndangered.getId());
-//    }
+    @Test
+    public void save_assignsIdToObject() {
+        Endangered testEndangered = new Endangered("White Rhino", "Healthy", "Adult");
+        testEndangered.save();
+        Endangered savedEndangered = Endangered.all().get(0);
+        assertEquals(testEndangered.getId(), savedEndangered.getId());
+    }
 
 
-//    @Test
-//    public void getSightings_retrievesAllSightingsFromDatabase_sightingsList() {
-//        Endangered testEndangered = new Endangered("White Rhino", "Healthy", "Adult");
-//        testEndangered.save();
-//        Sightings firstSightings = new Sightings("SE Quadrant", "Paula", testEndangered.getId());
-//        firstSightings.save();
-//        Sightings secondSightings = new Sightings("NW Quadrant", "Jacob", testEndangered.getId());
-//        secondSightings.save();
-//        Sightings[] sightings = new Sightings[] { firstSightings, secondSightings };
-//        assertTrue(testEndangered.getSightings().containsAll(Arrays.asList(sightings)));
-//    }
+    @Test
+    public void getSightings_retrievesAllSightingsFromDatabase_sightingsList() {
+        Endangered testEndangered = new Endangered("White Rhino", "Healthy", "Adult");
+        testEndangered.save();
+        Sightings firstSightings = new Sightings("SE Quadrant", "Paula", testEndangered.getId());
+        firstSightings.save();
+        Sightings secondSightings = new Sightings("NW Quadrant", "Jacob", testEndangered.getId());
+        secondSightings.save();
+        Sightings[] sightings = new Sightings[] { firstSightings, secondSightings };
+        assertTrue(testEndangered.getSightings().containsAll(Arrays.asList(sightings)));
+    }
 
 
 }
