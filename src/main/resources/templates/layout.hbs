@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wildlife tracking app</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/App.css'>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row min-vh-100 text-center justify-content-center align-items-center flex-column" id="main-page">
+    <div class="page-header bg-warning">
+        <h1 class="main"><img src="/images/logo.png" height="50px" width="50px">One! Two! Three! Sight</h1>
+    </div>
+        <br>
+
+        {{#block "content"}}
+        {{/block}}
+
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<footer class="footer">
+    <ul class="nav nav-tabs bg-warning">
+        <li role="presentation" class="nav"><a href="/">Homepage</a></li>
+        <li role="presentation" class="nav"><a href="/animal/list/">Animals</a></li>
+        <li role="presentation" class="nav"><a href="/endangered/list/">Endangered Animals</a></li>
+    </ul>
+</footer>
+
+
+</body>
+</html>

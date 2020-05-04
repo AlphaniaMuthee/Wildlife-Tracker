@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animals entry</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+</head>
+<body>
+<h1>ANIMALS PRESENT</h1>
+{{#if animals}}
+    {{#each animals}}
+            <p>Name:{{name}}</p>
+            <p>Health: {{health}}</p>
+            <p>Age: {{age}}</p>
+            {{/each}}
+        {{else}}
+        <p>No endangered animals</p>
+{{/if}}
+    </body>
+</html>
