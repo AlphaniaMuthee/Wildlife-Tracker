@@ -1,25 +1,16 @@
 import static spark.Spark.*;
+import java.util.HashMap;
+import spark.ModelAndView;
+
+import spark.template.handlebars.HandlebarsTemplateEngine;
+
 
 public class App {
     public static void main(String[] args) {
-        get("/", (request, response) ->
-                "<!DOCTYPE html>" +
-                        "<html>" +
-                        "<head>" +
-                        "<title>Wildlife tracking app</title>" +
-                        "<link rel='stylesheet' + href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>" +
-                        "</head>" +
-                        " <div class=\"row\">"+
-                        "<div class=\"col-md-5\">"+
-                        "<a href=\"/animal/\"><button>Add animal</button></a>" +
-                        "</div>"+
-                        "<div class=\"col-md-5\">"+
-                        "<a href=\"/endangered/\"><button>Add endangered animal</button></a>" +
-                        "</div>"+
-                        "</div>"+
-                        "</body>" +
-                        "</html>"
-    );
+        get("/", (request, response) -> {
+                    return new ModelAndView(new HashMap(), "index.hbs");
+                }, new HandlebarsTemplateEngine());
+
         get("/animal/", (request, response) ->
                 "<!DOCTYPE html>" +
                         "<html>" +

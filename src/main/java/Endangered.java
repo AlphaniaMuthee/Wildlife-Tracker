@@ -41,7 +41,7 @@ public class Endangered {
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO endangered (name, health, age ) VALUES (:name :health :age)";
+            String sql = "INSERT INTO endangered_animals (name, health, age ) VALUES (:name :health :age)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("health", this.health)
@@ -60,7 +60,7 @@ public class Endangered {
     }
 
     public static List<Endangered> all() {
-        String sql = "SELECT * FROM endangered";
+        String sql = "SELECT * FROM endangered_animals";
         try(Connection con = DB.sql2o.open()) {
             return con.createQuery(sql).executeAndFetch(Endangered.class);
         }
