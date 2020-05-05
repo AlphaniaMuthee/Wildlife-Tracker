@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: SightingsTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 9, Skipped: 0, Time elapsed: 0.465 sec <<< FAILURE! - in SightingsTest
+equals_returnsTrueIfLocationAndAnimalIdAreSAme_true(SightingsTest)  Time elapsed: 0.297 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+save_savesEndangeredAnimalIdIntoDB_true(SightingsTest)  Time elapsed: 0 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+save_savesAnimalIdIntoDB_true(SightingsTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+sightings_instantiateWithLocation_String(SightingsTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+sightings_InstantiatesCorrectly_true(SightingsTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+save_recordsTimeOfSightingInDatabase(SightingsTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+find_returnsSightingsWithSameId_secondSighting(SightingsTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+sightings_instantiateWithAnimalId_int(SightingsTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+save_assignsIdToSighting(SightingsTest)  Time elapsed: 0.001 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+

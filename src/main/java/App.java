@@ -2,6 +2,8 @@ import static spark.Spark.*;
 import java.util.HashMap;
 import spark.ModelAndView;
 import org.sql2o.Sql2o;
+
+import java.util.List;
 import java.util.Map;
 
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -31,13 +33,23 @@ public class App {
                     Map<String,Object> model = new HashMap<>();
                     return new ModelAndView(model, "animals.hbs");
                 }, new HandlebarsTemplateEngine());
+
+        get("/animal/list/", (request, response) -> {
+            Map<String,Object>model = new HashMap<>();
+                    List<Animal>animalList = Animal.all();
+                    model.put("animalList",animalList);
+                    return new ModelAndView(model, "animal-list.hbs");
+                }, new HandlebarsTemplateEngine());
         //posting new animals
         post("/animal/list/", (request, response) -> {
             Map<String,Object>model = new HashMap<>();
             String Name = request.queryParams("name");
+//            String location = request.queryParams("location");
+//            String rangername = request.queryParams("rangername");
             Animal animal = new Animal(Name);
-            request.session().attribute("Animal", animal.getName());
-            return new ModelAndView(model, "animal-list.hbs");
+            animal.save();
+            response.redirect("/animal/list/");
+            return null;
         }, new HandlebarsTemplateEngine());
 
         // getting new endangered animals

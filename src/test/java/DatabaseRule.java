@@ -4,7 +4,8 @@ import org.sql2o.*;
 public class DatabaseRule extends ExternalResource {
     @Override
     protected void before() {
-        DB.sql2o = new Sql2o("jdbc:postgress://ec2-52-207-25-133.compute-1.amazonaws.com:5432/dqhrjghhngdpq", "jpnwpfidtifdfl", "8208486c6a1d7b4fc4aab658e3571252200dd0979e447388da3c1651ddf49b18");
+        DB.sql2o = new Sql2o("jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26", "gauluvfvltjjbd", "b6e6967e7371a7ec0edaf36092e7c4fa55a291e9cb5e411f582cac00815bfb31");
+        //DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker", "alphania", "2020");;
     }
 
     @Override

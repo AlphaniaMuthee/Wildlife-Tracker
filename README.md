@@ -19,7 +19,7 @@ Launch psql and run the following commands to generate the database for the app.
 * CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
 
 ## Setup Requirements 
-A search engine and the link to the app provided below:
+A search engine and the <a href="https://trackanimal.herokuapp.com/">link</a> to the app.
 
 ## Support and contact Details
 For queries or more information, contact me through any of the following:

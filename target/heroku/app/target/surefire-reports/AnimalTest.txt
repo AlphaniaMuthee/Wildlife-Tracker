@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: AnimalTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in AnimalTest
+equals_returnsTrueIfNameAndIdAreSame_true(AnimalTest)  Time elapsed: 0 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+animal_instantiatesCorrectly_true(AnimalTest)  Time elapsed: 0 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+save_assignsIdToObject(AnimalTest)  Time elapsed: 0 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+all_returnsAllInstancesOfAnimal_true(AnimalTest)  Time elapsed: 0 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
+find_returnsAnimalWithSimilarId_secondAnimal(AnimalTest)  Time elapsed: 0 sec  <<< ERROR!
+org.sql2o.Sql2oException: Could not acquire a connection from DataSource - No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:postgress://ec2-50-17-90-177.compute-1.amazonaws.com:5432/dajf96v5ptft26
+
