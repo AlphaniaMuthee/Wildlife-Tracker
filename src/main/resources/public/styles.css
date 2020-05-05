@@ -1,0 +1,20 @@
+#color {
+    font-size: 50px;
+    color: orange;
+
+}
+#size {
+    font-size: 30px;
+}
+body {
+    background-image: url("/images/back2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+img {
+    padding: 10px;
+}
+.main {
+    color: black;
+}
